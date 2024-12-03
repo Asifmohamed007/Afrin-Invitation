@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.invitation-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(255, 154, 158, 0.3);
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    padding: 60px 0;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&auto=format&fit=crop') center/cover;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 154, 158, 0.8), rgba(250, 208, 196, 0.8));
+    z-index: 1;
+}
+
+.header h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #fff;
+    font-size: 4em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+}
+
+.invite-text {
+    font-size: 1.5em;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0;
+    position: relative;
+    font-family: 'Playfair Display', serif; /* Elegant and refined font for a wedding */
+    text-align: center;
+}
+
+.name {
+    font-family: 'Sacramento', cursive; /* Elegant, romantic font */
+    font-size: 2.9em; /* Slightly smaller size for better balance */
+    font-weight: 700; /* Bold weight to make the names stand out */
+    color: #2C3E50; /* Darker color for contrast and visibility */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4), /* Refined subtle glow effect */
+                 0px 0px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+    animation: nameFloat 3s ease-in-out infinite;
+}
+
+.name::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.15), transparent 70%);
+    filter: blur(8px); /* More subtle blur */
+    z-index: -1;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.and {
+    font-family: 'Pacifico', cursive; /* Elegant cursive font for the '&' */
+    font-size: 1.3em; /* Adjusted size for the '&' */
+    color: #2C3E50; /* Matching dark color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: andPulse 2s ease-in-out infinite;
+}
+
+@keyframes nameFloat {
+    0%, 100% {
+        transform: translateY(0) rotateX(0);
+    }
+    50% {
+        transform: translateY(-5px) rotateX(5deg); /* Slight floating effect */
+    }
+}
+
+@keyframes andPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.8em; /* Smaller size for mobile devices */
+    }
+
+    .and {
+        font-size: 2.4em; /* Adjust '&' size for mobile */
+    }
+}
+
+
+.celebration-text {
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.details {
+    margin: 40px 0;
+    background: rgba(255, 154, 158, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 154, 158, 0.2);
+}
+
+.detail-item {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.detail-item i {
+    color: #ff6b6b;
+    font-size: 28px;
+    filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.3));
+}
+
+.detail-item p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.action-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.map-container {
+    margin: 40px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
+    border: 3px solid rgba(255, 154, 158, 0.3);
+}
+
+.message-section {
+    background-color: #fff0f0; /* Soft pink background for a gentle look */
+    padding: 50px 0;
+    text-align: center;
+    font-family: 'Cinzel', serif; /* Elegant, classic serif font */
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-heading {
+    font-family: 'Cinzel', serif; /* Elegant, classic serif font */
+    font-size: 2.1em;
+    color: #e74c3c; /* Warm, romantic red */
+    margin-bottom: 20px;
+}
+
+.message-text {
+    font-size: 1.3em;
+    color: #555; /* Soft text color for readability */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.message-note {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .message-heading {
+        font-size: 2em;
+    }
+
+    .message-text {
+        font-size: 1.2em;
+    }
+
+    .message-note {
+        font-size: 1.1em;
+    }
+}
+
+
+.footer {
+    padding: 40px;
+    background: linear-gradient(45deg, rgba(255, 154, 158, 0.2), rgba(250, 208, 196, 0.2));
+    margin-top: 40px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.8em;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 3em;
+    }
+    
+    .name {
+        font-size: 3.2em;
+    }
+    
+    .and {
+        font-size: 2.5em;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
+
+.promo {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e); /* Match the gradient background */
+    color: rgb(29, 29, 29); /* Keep the text color white for contrast */
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Add padding around the text */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    margin-top: 20px; /* Space above the promo section */
+}
+
+.promo a {
+    color: #000000; /* Gold color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for the link */
+}
+
+.promo a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+    color: #ffffff; /* Change color on hover */
+}
+
+.promo p {
+    font-size: 14px; /* Slightly smaller font size for promo text */
+    margin: 0; /* Remove default margin */
+}
+
+.promo .promo span {
+    font-style: italic; /* Italicize the text */
+}
