@@ -12,7 +12,7 @@
 
   <h2 align="center">Wedding Reception Invitation Website</h2>
 
-  Wedding Reception Invitation website is a fully responsive, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+  Wedding Reception Invitation website is a fully responsive, <br />Responsive for all Devices, build using HTML, CSS, and JavaScript.
 
   <a href="https://afrin-invitation.netlify.app/"><strong>➥ Live Demo</strong></a>
 
