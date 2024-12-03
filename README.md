@@ -14,7 +14,7 @@
 
   Wedding Reception Invitation website is a fully responsive, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://anujtiles.netlify.app"><strong>➥ Live Demo</strong></a>
+  <a href="https://afrin-invitation.netlify.app/"><strong>➥ Live Demo</strong></a>
 
 </div>
 

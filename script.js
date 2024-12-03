@@ -177,3 +177,28 @@ document.head.appendChild(style);
 document.addEventListener('contextmenu', function(event) {
  event.preventDefault();
 });
+
+
+// GIFT BOX
+const giftBox = document.getElementById('gift-box');
+const animatedItems = document.getElementById('animated-items');
+
+// When the gift box is clicked
+giftBox.addEventListener('click', () => {
+    // Change gift box to "open" image
+    giftBox.src = 'assets/gift_open.png';
+
+    // Show the animated items (hearts, flowers, ribbons)
+    animatedItems.classList.remove('hidden');
+
+    // Add animation class to start the pop effect
+    setTimeout(() => {
+        animatedItems.classList.add('pop-effect');
+    }, 100);
+
+    // Reset the box after 3 seconds or adjust based on the desired duration
+    setTimeout(() => {
+        giftBox.src = 'assets/gift_close.png'; // Reset gift box to closed state
+        animatedItems.classList.add('hidden'); // Hide the animated items
+    }, 4000); // Adjust this duration based on your animation
+});
