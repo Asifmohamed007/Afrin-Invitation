@@ -624,3 +624,254 @@ body {
         height: 15vw;
     }
 }
+
+/* COUNTDOWN */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.countdown-heart {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    padding: 25px;
+    border-radius: 50%;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.countdown-heart:hover {
+    transform: scale(1.1);
+}
+
+.countdown-heart i {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.countdown-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.countdown-number {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive; /* Elegant, classic serif font */
+}
+
+.message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.big-day-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff6b6b;
+    animation: fadeIn 2s ease;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .countdown-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .countdown-heart {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+    }
+
+    .countdown-number {
+        font-size: 28px;
+    }
+
+    .big-day-text {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1024px) {
+.countdown-container {
+gap: 20px; /* Slightly reduced gap for tablets */
+margin-top: 30px;
+margin-bottom: 30px;
+flex-wrap: nowrap; /* Ensures items stay in a single row */
+}
+
+.countdown-heart {
+width: 140px;
+height: 140px;
+padding: 20px;
+}
+
+.countdown-number {
+font-size: 32px;
+}
+
+.countdown-heart i {
+font-size: 35px; /* Adjust icon size inside the heart */
+}
+
+.big-day-text {
+font-size: 35px;
+}
+}
+
+@media (max-width: 768px) {
+.countdown-container {
+gap: 20px; /* Keeps the same gap for mobile devices */
+margin-top: 25px;
+margin-bottom: 25px;
+justify-content: center; /* Center align the countdown hearts */
+flex-wrap: nowrap; /* Keep all items in a row */
+}
+
+.countdown-heart {
+width: 130px;
+height: 130px;
+padding: 15px;
+}
+
+.countdown-number {
+font-size: 28px;
+}
+
+.countdown-heart i {
+font-size: 28px; /* Reduced icon size for better fit */
+}
+
+.big-day-text {
+font-size: 30px;
+}
+}
+
+@media (max-width: 480px) {
+.countdown-container {
+gap: 15px; /* Minimal gap for small devices */
+margin-top: 20px;
+margin-bottom: 20px;
+justify-content: center; /* Ensure the elements are centered */
+flex-wrap: nowrap; /* Keep everything in a single line */
+}
+
+.countdown-heart {
+width: 110px;
+height: 110px;
+padding: 12px;
+}
+
+.countdown-number {
+font-size: 24px;
+}
+
+.countdown-heart i {
+font-size: 22px; /* Smaller icon for small screens */
+}
+
+.big-day-text {
+font-size: 25px;
+}
+}
+
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.chocolate-message {
+    position: absolute;
+    left: -220px; /* Adjust to make the message box appear nicely to the left */
+    bottom: 110px;
+    padding: 25px 40px; /* Increase padding for a more spacious feel */
+    background: linear-gradient(45deg, #ff6ec7, #ff9a8b); /* Softer gradient with pink and coral tones */
+    color: #fff;
+    font-size: 24px; /* Slightly larger font size for better visibility */
+    font-family: 'Lobster', cursive; /* Fancy, love-themed font */
+    text-align: center;
+    border-radius: 35px; /* Larger rounded corners for a more elegant look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    opacity: 0;
+    animation: fadeIn 2s forwards, bounceIn 2s 2s forwards; /* Keep the animations */
+    z-index: 999; /* Ensures the message is on top */
+    width: auto;
+    max-width: 300px; /* Restrict width to make the message box look tidy */
+}
+
+.chocolate-message p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-60px);
+    }
+    60% {
+        transform: translateY(15px);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .chocolate-message {
+        left: -180px; /* Adjust the position to keep it visible on smaller screens */
+        padding: 20px 30px; /* Slightly smaller padding */
+        font-size: 20px; /* Reduce font size for smaller screens */
+        border-radius: 30px; /* Smaller rounded corners */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly less shadow */
+        max-width: 250px; /* Restrict the width for mobile view */
+        bottom: 80px;
+        font-family: 'Lobster', cursive; /* Fancy, love-themed font */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chocolate-message {
+        left: -120px; /* Position adjustment for very small screens */
+        font-size: 18px; /* Even smaller font size for small screens */
+        padding: 15px 20px; /* Reduce padding for more compact look */
+        border-radius: 25px; /* Smaller rounded corners for compactness */
+        max-width: 220px; /* Further restrict width for small mobile screens */
+        bottom: 60px;
+    }
+}

@@ -24,6 +24,10 @@
     
         <!-- AOS for scroll animations -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- Include FontAwesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     
         <!-- Open Graph Meta Tags for better preview on social media -->
         <meta property="og:title" content="Wedding Reception - Yaser & Afrin">
@@ -73,6 +77,12 @@
             <img src="assets/ribbon.png" class="ribbon" alt="Ribbon" />
             <img src="assets/ribbon.png" class="ribbon" alt="Ribbon" />
         </div>
+        <!-- New Message Box -->
+    <div id="chocolate-message" class="chocolate-message hidden">
+        <div class="message-box">
+            <p>Here's a sweet surprise just for you! Enjoy this chocolates!🍬🍫🍭</p>
+        </div>
+    </div>
     </div> 
     
     <div id="scroll-top" class="scroll-top">
@@ -92,7 +102,33 @@
                     <span class="name">Yaser Arafath</span> 
                     <img src="assets/wedding.gif" alt="ring-icon" class="gif" style="margin: 10px 0;">
                     <span class="name">Afrin Thabeeba</span>
-                </h2>
+                </h2> 
+
+                <div class="countdown-container" data-aos="fade-up">
+                    <div class="countdown-heart">
+                        <i class="fas fa-heart"></i>
+                        <p class="countdown-title">Days</p>
+                        <div class="countdown-number" id="days"></div>
+                    </div>
+                    <div class="countdown-heart">
+                        <i class="fas fa-heart"></i>
+                        <p class="countdown-title">Hours</p>
+                        <div class="countdown-number" id="hours"></div>
+                    </div>
+                    <div class="countdown-heart">
+                        <i class="fas fa-heart"></i>
+                        <p class="countdown-title">Minutes</p>
+                        <div class="countdown-number" id="minutes"></div>
+                    </div>
+                    <div class="countdown-heart">
+                        <i class="fas fa-heart"></i>
+                        <p class="countdown-title">Seconds</p>
+                        <div class="countdown-number" id="seconds"></div>
+                    </div>
+                </div>
+                <div class="message" id="message" style="display: none;">
+                    <p class="big-day-text">The Big Day has Arrived!</p>
+                </div>
                 
                 <p class="celebration-text" data-aos="fade-up">
                     We would love to invite you to join us as we celebrate our wedding reception! <br> Your presence will make this special day even more memorable. Come share in the joy, laughter, and love as we begin this beautiful journey together!
