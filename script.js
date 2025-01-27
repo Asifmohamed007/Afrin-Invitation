@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.save-date-btn').addEventListener('click', () => {
         const event = {
             title: "Yaser Arafath & Afrin Thabeeba's Wedding Reception ❤️",
-            description: "Join us at Grace Family Hall for a wonderful evening with dinner, celebrations, and lasting memories.",
+            description: "Join us at Grace Family Hall for a wonderful Noon with Lunch, celebrations, and lasting memories.",
             location: "Grace Family Hall",
-            start: new Date('2025-05-25T18:30:00'), // Starting time for the event
-            end: new Date('2025-05-25T22:00:00'), // Ending time for the event
+            start: new Date('2025-05-25T11:30:00'), // Starting time for the event
+            end: new Date('2025-05-25T14:00:00'), // Ending time for the event
         };
 
         // Format the dates to match Google Calendar's format (YYYYMMDDTHHMMSSZ)
@@ -213,7 +213,7 @@ giftBox.addEventListener('click', () => {
 
 // COUNTDOWN
 // Set the date we're counting down to
-var countDownDate = new Date("May 25, 2025 05:30:00").getTime();
+var countDownDate = new Date("May 25, 2025 11:30:00").getTime();
                     
 // Update the countdown every 1 second
 var x = setInterval(function() {
